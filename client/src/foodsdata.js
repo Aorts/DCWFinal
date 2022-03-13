@@ -1,4 +1,4 @@
-const pizzas =[
+const foods =[
     {
 
         "name": "PEPPER BARBECUE CHICKEN",
@@ -18,4 +18,4 @@ const pizzas =[
         "description": "Pepper Barbeque Chicken I Cheese"
     }
 ]
-export default pizzas
+export default foods

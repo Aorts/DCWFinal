@@ -1,10 +1,23 @@
 import React from 'react'
-import pizzas from '../pizzasdata'
+import Food from '../components/Food'
+import foods from '../foodsdata'
 
 export default function Homescreen(){
     return(
         <div>
-            <h1>{pizzas.length}</h1>
+            <div className="row">
+
+                {foods.map(food=>{
+
+                    return<div className="col-md-4">
+                        <div>
+                            <Food food={food}/>
+                            </div>
+                        </div>
+                
+                })}
+
+            </div>
         </div>
     )
 }
