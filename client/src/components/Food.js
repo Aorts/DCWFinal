@@ -10,18 +10,18 @@ export default function Food({food}){
 
             <div className="flex-container">
                 
-                <div className='w-100'>
+                <div className='w-100 m-1'>
                     <p>Varients</p>
-                    <select value={varient} onChange={(e)=>{setvarient(e.target.value)}}>
+                    <select className='form-control' value={varient} onChange={(e)=>{setvarient(e.target.value)}}>
                     {food.varients.map(varient=>{
                         return <option value={varient}>{varient}</option>
                     })}
                     </select>
                 </div>
 
-                <div className='w-100'>
+                <div className='w-100 m-1'>
                     <p>Quantity</p>
-                    <select value={quantity} onChange={(e)=>{setquantity(e.target.value)}}>
+                    <select className='form-control' value={quantity} onChange={(e)=>{setquantity(e.target.value)}}>
                         {[...Array(10).keys()].map((x , i)=>{
 
                             return <option value={i+1}>{i+1}</option>
