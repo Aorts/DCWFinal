@@ -35,6 +35,25 @@ const foods =[
         "category": "nonveg",
         "image": "https://farm8.staticflickr.com/7227/7353291288_0a8048bb80_o.jpg",
         "description": "The clear version is known as tom yum nam sai "
+    },
+
+    {
+
+        "name": "Gaeng Som",
+        "varients": [
+            "small",
+            "medium",
+            "large"
+        ],
+        "prices": [{
+            "small": 45,
+            "medium": 55,
+            "large": 70
+        }
+        ],
+        "category": "nonveg",
+        "image": "https://farm9.staticflickr.com/8001/7351907398_7d0a16eb62_o.jpg",
+        "description": "Gaeng som translates to sour soup "
     }
 ]
 export default foods
