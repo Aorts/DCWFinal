@@ -34,7 +34,7 @@ export default function Food({food}){
                 
                         <div className="flex-container">
                             <div className='m-1 w-100'>
-                                <h1>Price : {food.prices[0][varient] * quantity}</h1>
+                                <h1 className='mt-1'>Price : {food.prices[0][varient] * quantity} THB </h1>
                             </div>
                             <div className='m-1 w-100'>
                                 <button className="btn">ADD TO CART</button>
