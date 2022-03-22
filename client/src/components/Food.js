@@ -56,7 +56,8 @@ export default function Food({ food }) {
                 </Modal.Header>
 
                 <Modal.Body>
-                    <img src='{food.image}'/>
+                    <img src={food.image} className="img-fluid" style={{ height: '200px'}}/>
+                    <p>{food.description}</p>
                 </Modal.Body>
 
                 <Modal.Footer>
