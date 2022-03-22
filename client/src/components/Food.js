@@ -4,7 +4,7 @@ export default function Food({food}){
     const [quantity, setquantity] = useState(1)
     const [varient, setvarient] = useState('small')
     return (
-        <div>
+        <div style={{margin: '70px'}} class="shadow-lg p-3 mb-5 bg-body rounded"Larger shadow>
             <h1>{food.name}</h1>
             <img src={food.image} className="img-fluid" style={{height:'200px' , width:'200px'}}/>
 
