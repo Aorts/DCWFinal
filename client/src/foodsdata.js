@@ -92,6 +92,25 @@ const foods =[
         "category": "nonveg",
         "image": "https://farm8.staticflickr.com/7074/7166679533_8e88e3be4b_o.jpg",
         "description": "While tom yum goong is popular throughout most of Thailand, tom saap is more of the signature soup of Isaan. "
+    },
+
+    {
+
+        "name": "Soup Neua (Beef Soup)",
+        "varients": [
+            "small",
+            "medium",
+            "large"
+        ],
+        "prices": [{
+            "small": 55,
+            "medium": 65,
+            "large": 80
+        }
+        ],
+        "category": "nonveg",
+        "image": "https://farm8.staticflickr.com/7244/7356132342_0659ce97e0_o.jpg",
+        "description": "Beef isn’t all that common in Thailand unless you’re in the south of the country where there’s a higher percentage of Muslims who eat beef rather than pork (like the majority of the country). "
     }
 ]
 export default foods
