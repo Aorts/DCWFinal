@@ -73,6 +73,25 @@ const foods =[
         "category": "nonveg",
         "image": "https://farm8.staticflickr.com/7213/7351844118_3a9c401a42_o.jpg",
         "description": "Tom Kha Gai is a famous Thai chicken and galangal soup that’s eaten more like a curry than a soup "
+    },
+
+    {
+
+        "name": "Tom Saap",
+        "varients": [
+            "small",
+            "medium",
+            "large"
+        ],
+        "prices": [{
+            "small": 45,
+            "medium": 55,
+            "large": 70
+        }
+        ],
+        "category": "nonveg",
+        "image": "https://farm8.staticflickr.com/7074/7166679533_8e88e3be4b_o.jpg",
+        "description": "While tom yum goong is popular throughout most of Thailand, tom saap is more of the signature soup of Isaan. "
     }
 ]
 export default foods
