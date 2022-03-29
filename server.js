@@ -3,7 +3,9 @@ const express = require("express");
 const Food = require('./models/foodmodel')
 
 const app = express();
+
 const db = require("./db");
+
 app.use(express.json());
 
 
