@@ -66,6 +66,5 @@ export default function Food({ food }) {
 
             </Modal>
         </div>
-        
     )
 }
