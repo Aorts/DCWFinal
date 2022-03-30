@@ -7,26 +7,35 @@ import foods from '../foodsdata'
 export default function Homescreen(){
 
     const dispatch = useDispatch()
+
+    const foodsstate = useSelector(state=>state.getAllFoodsReducer)
+
+    const {foods , error , loading} = foodsstate
+
     useEffect(() => {
         dispatch(getAllFoods())
     }, [])
-
-
-
+    
 
     return(
         <div>
             <div className="row">
 
-                {foods.map(food=>{
+                {loading ? (
+                    <h1> Loading ...</h1>
+                    ) : error ? (
+                    <h1> Something ...</h1>
+                    ) : (
+                        foods.map(food=>{
 
-                    return<div className="col-md-4">
-                        <div>
-                            <Food food={food}/>
-                            </div>
-                        </div>
-                
-                })}
+                            return<div className="col-md-4">
+                                <div>
+                                    <Food food={food}/>
+                                    </div>
+                                </div>
+                                })
+
+                    )}
             </div>
         </div>
     )
