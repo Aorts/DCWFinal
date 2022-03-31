@@ -8,10 +8,17 @@ export default function Food({ food }) {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+
+function addToCart() {
+
+
+}
+
     return (
-        <div style={{ margin: '70px' }} class="shadow p-3 mb-5 bg-body rounded" Larger shadow>
-
-
+        <div  className="shadow-lg p-3 mb-5 bg-white rounded"
+            key={food._id}
+        >
             <div onClick={handleShow}>
                 <h1>{food.name}</h1>
                 <img src={food.image} className="img-fluid" style={{ height: '200px', width: '200px' }} />
@@ -46,7 +53,7 @@ export default function Food({ food }) {
                     <h1 className='mt-1'>Price : {food.prices[0][varient] * quantity} THB </h1>
                 </div>
                 <div className='m-1 w-100'>
-                    <button className="btn">ADD TO CART</button>
+                    <button className="btn" onClick={addToCart}>ADD TO CART</button>
                 </div>
             </div>
 
