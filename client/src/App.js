@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter forceRefresh={false} >
         <Routes>
           <Route path="/" element={<Homescreen/>}></Route>
-          <Route path="/cart" element={<Cartscreen/>} exact></Route>
+          <Route path="/cart" element={<Cartscreen/>} ></Route>
           <Route path="/register" element={<Registerscreen/>}></Route>
           <Route path="/login" element={<Loginscreen/>}></Route>
         </Routes>  
