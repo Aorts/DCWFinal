@@ -9,10 +9,13 @@ export default function Loginscreen() {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        if(localStorage.getItem('currentUser')){
-            window.location.href='/'
-        }
-    }, [])
+            
+            if(localStorage.getItem('currentUser'))
+            {
+                window.location.href='/'
+            }
+
+        }, [])
 
     function login(){
         const user={email , password}
