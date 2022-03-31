@@ -6,7 +6,6 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 import { addToCartReducer} from './reducers/cartReducer'
 
 
-
 const finalReducer =  combineReducers({
     getAllFoodsReducer : getAllFoodsReducer,
     addToCartReducer : addToCartReducer
