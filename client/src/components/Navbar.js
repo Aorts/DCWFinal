@@ -4,6 +4,10 @@ import {useSelector , useDispatch} from 'react-redux';
 export default function Navbar() {
     const cartstate = useSelector(state=>state.addToCartReducer)
     const cartItems = cartstate.cartItems
+
+    const userstate = useSelector(state => state.loginUserReducer)
+    //const { currentUser } = userstate
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded">

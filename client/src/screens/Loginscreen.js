@@ -26,7 +26,7 @@ export default function Loginscreen() {
         <div>
             <div className="row justify-content-center mt-5">
                 <div className="col-md-5 mt-5 text-left">
-                    <h2 className="text-center m*2" style={{fontSize: "35px"}}>
+                    <h2 className="text-center m-2" style={{fontSize: "35px"}}>
                         Login
                     </h2>
                     <div>
