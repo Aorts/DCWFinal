@@ -2,40 +2,39 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllFoods } from '../action/foodsAction'
 import Food from '../components/Food'
-import foods from '../foodsdata'
 
-export default function Homescreen(){
+export default function Homescreen() {
 
     const dispatch = useDispatch()
 
-    const foodsstate = useSelector(state=>state.getAllFoodsReducer)
+    const foodsstate = useSelector(state => state.getAllFoodsReducer)
 
-    const {foods , error , loading} = foodsstate
+    const { foods, error, loading } = foodsstate
 
     useEffect(() => {
         dispatch(getAllFoods())
     }, [])
-    
 
-    return(
+
+    return (
         <div>
-            <div className="row">
+            <div className="row justify-content-center">
 
                 {loading ? (
                     <h1> Loading ...</h1>
-                    ) : error ? (
-                    <h1> Something ...</h1>
-                    ) : (
-                        foods.map(food=>{
+                ) : error ? (
+                    <h1> Something wong ...</h1>
+                ) : (
+                    foods.map(food => {
 
-                            return<div className="col-md-4">
-                                <div>
-                                    <Food food={food}/>
-                                    </div>
-                                </div>
-                                })
+                        return <div className="col-md-3 m-3" key = {food._id}>
+                            <div>
+                                <Food food={food} />
+                            </div>
+                        </div>
+                    })
 
-                    )}
+                )}
             </div>
         </div>
     )
