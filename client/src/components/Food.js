@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
-import { Modal } from 'react-bootstrap'
+import React, { useState } from 'react';
+import { Modal } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { addtocart } from '../action/cartAction';
 
 export default function Food({ food }) {
     const [quantity, setquantity] = useState(1)
@@ -9,10 +11,9 @@ export default function Food({ food }) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-
+    const dispatch = useDispatch()
 function addToCart() {
-
-
+    dispatch(addtocart(food, quantity, varient))
 }
 
     return (
