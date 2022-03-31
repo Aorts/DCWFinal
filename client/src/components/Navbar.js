@@ -3,10 +3,11 @@ import {useSelector , useDispatch} from 'react-redux';
 
 export default function Navbar() {
     const cartstate = useSelector(state=>state.addToCartReducer)
+    const cartItems = cartstate.cartItems
     return (
         <div>
             <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded">
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand" href="/">
                     ChangFood
                 </a>
                 <button
@@ -28,8 +29,8 @@ export default function Navbar() {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
-                                Cart {cartstate.cartItems.length}
+                            <a className="nav-link" href="/cart">
+                                Cart {cartItems.length}
                             </a>
                         </li>
 
