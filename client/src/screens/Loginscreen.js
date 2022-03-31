@@ -1,9 +1,48 @@
-import React from 'react'
+import React , {useState, useEffect} from "react";
+import { useDispatch , useSeclector } from "react-redux";
+import {loginUser} from "../action/userActions";
 
 export default function Loginscreen() {
+
+    const [email, setemail] = useState("");
+    const [password, setpassword] = useState("");
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        if(localStorage.getItem('currentUser')){
+            window.location.href='/'
+        }
+    }, [])
+
+    function login(){
+        const user={email , password}
+        dispatch(loginUser(user))
+    }
+
     return(
         <div>
-            <h1>Login screen</h1>
+            <div className="row justify-content-center mt-5">
+                <div className="col-md-5 mt-5 text-left">
+                    <h2 className="text-center m*2" style={{fontSize: "35px"}}>
+                        Login
+                    </h2>
+                    <div>
+                        <input required type="text" placeholder="email" className="form-control"value={email} onChange={(e)=>{setemail(e.target.value)}}/>
+                        <input 
+                            type="text" 
+                            placeholder="password" 
+                            className="form-control" 
+                            value={password}
+                            required
+                            onChange={(e)=>{setpassword(e.target.value)}}    
+                        />
+
+                        <button onClick={login} className="btn mt-3">LOGIN</button>
+                        <a href="/register">Click Here To Register</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
     )
 }
