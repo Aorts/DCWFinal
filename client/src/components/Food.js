@@ -7,11 +7,10 @@ export default function Food({ food }) {
     const [quantity, setquantity] = useState(1)
     const [varient, setvarient] = useState('small')
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
     const dispatch = useDispatch()
+    
 function addToCart() {
     dispatch(addtocart(food, quantity, varient))
 }
