@@ -19,9 +19,7 @@ const currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorag
 
 const initialState = {
     addToCartReducer :{cartItems : cartItems},
-    loginUserReducer : {
-        currentUser : currentUser
-    }
+    loginUserReducer :{currentUser : currentUser}
 }
 
 const composeEnhancers = composeWithDevTools({})
