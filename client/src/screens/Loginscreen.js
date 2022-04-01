@@ -1,15 +1,12 @@
 import React , {useState, useEffect} from 'react';
 import { useDispatch , useSeclector } from 'react-redux'
 import {loginUser} from "../action/userActions";
-import Error from "../components/Error";
-import Loading from "../components/Loading";
+
 
 export default function Loginscreen() {
 
     const [email, setemail] = useState("");
     const [password, setpassword] = useState("");
-    //const loginstate = useSeclector(state =>state.loginUserReducer)
-    //const {loading , error} = loginstate
     const dispatch = useDispatch()
 
     useEffect(() => {
