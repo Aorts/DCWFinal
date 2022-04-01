@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllFoods } from '../action/foodsAction'
+import Error from '../components/Error'
 import Food from '../components/Food'
 import Loading from '../components/Loading'
 
@@ -24,7 +25,7 @@ export default function Homescreen() {
                 {loading ? (
                     <Loading/>
                 ) : error ? (
-                    <h1> Something wong ...</h1>
+                    <Error error='Something went wrong!'/>
                 ) : (
                     foods.map(food => {
 
