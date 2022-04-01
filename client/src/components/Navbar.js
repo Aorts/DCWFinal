@@ -13,27 +13,36 @@ export default function Navbar() {
 
     return (
         <div>
-            <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded">
-                <a className="navbar-brand" href="/">
-                    ChangFood
-                </a>
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
 
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav ml-auto">
+
+
+            <nav className="navbar navbar-expand-lg shadow-lg p-3 bg-white rounded">
+                <div className='container-fluidit'>
+                    <a className="navbar-brand" href="/">
+                        ChangFood
+                    </a>
+                </div>
+
+
+
+
+                <div className="navbar-collapse" id="navbarNav">
+                    <div class="d-flex justify-content-end"> <div class="mr-auto p-16">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+                    <div class="p-16">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+                        <div class="p-16">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+                        <div class="d-flex justify-content-end"> <div class="mr-auto p-16">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+                    <div class="p-16">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+                        <div class="p-16">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div> 
+                    </div>
+                    <div class="d-flex justify-content-end"> <div class="mr-auto p-16">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+                    <div class="p-16">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+                        <div class="p-16">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div> 
+                    </div>
+                    <ul className="navbar-nav mr p-2">
 
 
                         <li className="nav-item">
-                            <a className="nav-link" href="/login">
+                            <a className="nav-link text-center" href="/login">
                                 Login
                             </a>
                         </li>
@@ -49,6 +58,7 @@ export default function Navbar() {
                         </li>
 
                     </ul>
+                    </div>
                 </div>
             </nav>
         </div>
