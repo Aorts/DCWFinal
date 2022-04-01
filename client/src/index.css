@@ -44,3 +44,7 @@ input{
   margin: 10px !important;
   box-shadow: none !important;
 }
+
+.fa-trash{
+  color: red;
+}

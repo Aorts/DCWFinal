@@ -7,16 +7,18 @@ export default function Food({ food }) {
     const [quantity, setquantity] = useState(1)
     const [varient, setvarient] = useState('small')
     const [show, setShow] = useState(false);
+
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
     const dispatch = useDispatch()
-    
-function addToCart() {
-    dispatch(addtocart(food, quantity, varient))
-}
+
+    function addToCart() {
+        dispatch(addtocart(food, quantity, varient))
+    }
 
     return (
-        <div  className="shadow-lg p-3 mb-5 bg-white rounded"
+        <div className="shadow-lg p-3 mb-5 bg-white rounded"
             key={food._id}
         >
             <div onClick={handleShow}>
@@ -63,7 +65,7 @@ function addToCart() {
                 </Modal.Header>
 
                 <Modal.Body>
-                    <img src={food.image} className="img-fluid" style={{ height: '200px'}}/>
+                    <img src={food.image} className="img-fluid" style={{ height: '200px' }} />
                     <p>{food.description}</p>
                 </Modal.Body>
 

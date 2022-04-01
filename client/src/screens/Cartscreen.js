@@ -1,9 +1,11 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-
+import {addToCart} from '../action/cartAction'
+import {deleteFromCart} from '../action/cartAction'
 export default function Cartscreen() {
     const cartstate = useSelector(state => state.addToCartReducer)
     const cartItems = cartstate.cartItems
+    const dispatch = useDispatch()
     var subtotal = cartItems.reduce((x, item) => x + item.price, 0)
     return (<div>
         <div className="row justify-content-center">
@@ -25,6 +27,12 @@ export default function Cartscreen() {
                             </h1>
                             <hr />
                         </div>
+
+                      
+
+                            <div className='m-1'>
+                                <i className="fa fa-trash mt-5" aria-hidden="true" onClick={()=>{dispatch(deleteFromCart(item))}}></i>
+                            </div>
 
                     </div>
                 )}
