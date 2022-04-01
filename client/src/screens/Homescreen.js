@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllFoods } from '../action/foodsAction'
 import Food from '../components/Food'
+import Loading from '../components/Loading'
 
 export default function Homescreen() {
 
@@ -21,7 +22,7 @@ export default function Homescreen() {
             <div className="row justify-content-center">
 
                 {loading ? (
-                    <h1> Loading ...</h1>
+                    <Loading/>
                 ) : error ? (
                     <h1> Something wong ...</h1>
                 ) : (
