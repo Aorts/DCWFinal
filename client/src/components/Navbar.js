@@ -1,12 +1,14 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { logoutUser } from '../action/userActions';
 
 export default function Navbar() {
     const cartstate = useSelector(state => state.addToCartReducer)
     const cartItems = cartstate.cartItems
+    const dispatch = useDispatch()
 
-    const userstate = useSelector(state => state.loginUserReducer)
-    const currentUser = userstate
+   // const userstate = useSelector(state => state.loginUserReducer)
+    //const currentUser = userstate
 
     return (
         <div>
@@ -28,16 +30,18 @@ export default function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ml-auto">
 
-                        {currentUser ? (
-                            <li>{currentUser.name}</li>
-                        ) : (
-                            <li className="nav-item">
-                                <a className="nav-link" href="/login">
-                                    Login 
-                                </a>
-                            </li>
-                        )}
+              
+                        <li className="nav-item">
+                            <a className="nav-link" href="/login">
+                                Login
+                            </a>
+                        </li>
 
+                        <li className="nav-item">
+                            <a className="nav-link" href="/login" onClick={()=>{dispatch(logoutUser())}}>
+                                <li>Logout</li>
+                            </a>
+                        </li>
 
                         <li className="nav-item">
                             <a className="nav-link" href="/cart">
