@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { logoutUser } from '../action/userActions';
 
+
 export default function Navbar() {
     const cartstate = useSelector(state => state.addToCartReducer)
     const cartItems = cartstate.cartItems
