@@ -8,7 +8,7 @@ export default function Navbar() {
     const cartItems = cartstate.cartItems
     const dispatch = useDispatch()
 
-   // const userstate = useSelector(state => state.loginUserReducer)
+    // const userstate = useSelector(state => state.loginUserReducer)
     //const currentUser = userstate
 
     return (
@@ -31,7 +31,7 @@ export default function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ml-auto">
 
-              
+
                         <li className="nav-item">
                             <a className="nav-link" href="/login">
                                 Login
@@ -39,15 +39,13 @@ export default function Navbar() {
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="/login" onClick={()=>{dispatch(logoutUser())}}>
-                                <li>Logout</li>
+                            <a className="nav-link" href="/cart">
+                                Cart {cartItems.length}
                             </a>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="/cart">
-                                Cart {cartItems.length}
-                            </a>
+                            <i className="fa fa-sign-out fa-2x mt-1 " aria-hidden="true" onClick={() => { dispatch(logoutUser()) }}></i>
                         </li>
 
                     </ul>
