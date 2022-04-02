@@ -32,7 +32,8 @@ export default function Loginscreen() {
                     <div>
                         <input required type="text" placeholder="email" className="form-control"value={email} onChange={(e)=>{setemail(e.target.value)}}/>
                         <input 
-                            type="text" 
+                            type="password" 
+                            autocomplete="current-password"
                             placeholder="password" 
                             className="form-control" 
                             value={password}
