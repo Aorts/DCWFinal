@@ -22,6 +22,7 @@ export default function Loginscreen() {
     function login() {
         const user = { email, password }
         dispatch(loginUser(user))
+        alert("You're login.")
     }
    
     const responseFacebook = (response) => {
