@@ -6,12 +6,13 @@ const fbUser = require("../models/fbuserModel")
 router.post("/facebook_login", async (req, res) => {
     const { name, email} = req.body
 
-    const newUser = new fbUser({ name, email})
+    
 
     const user = await fbUser.find({ name, email})
     
     if(!user){
     try {
+        const newUser = new fbUser({ name, email})
         newUser.save()
         res.send('User Registered successfully')
 
@@ -19,7 +20,7 @@ router.post("/facebook_login", async (req, res) => {
         return res.status(400).json({ message: error });
     }
 }
-    else{
+    else if(user){
     try {
 
         const user = await fbUser.find({ name, email})
