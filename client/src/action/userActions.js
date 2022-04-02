@@ -11,7 +11,6 @@ export const registerUser=(user)=>async dispatch=>{
     } catch (error) {
         dispatch({type:'USER_REGISTER_FAILED', payload: error})
     }
-
 }
 
 export const loginUser=(user)=>async dispatch=>{

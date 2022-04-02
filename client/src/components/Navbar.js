@@ -13,7 +13,6 @@ export default function Navbar() {
 
     return (
         <div>
-
             <nav className="navbar navbar-expand-lg shadow-lg p-3 bg-white rounded">
                 <div className='container-fluidit'>
                     <a className="navbar-brand" href="/">
@@ -48,7 +47,6 @@ export default function Navbar() {
                                     <a className="nav-link text-center" href="/login">
                                         Login
                                     </a>
-
                                 </li>
                             )}
                             <li className="nav-item">
