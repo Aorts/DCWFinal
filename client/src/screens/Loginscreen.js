@@ -66,16 +66,6 @@ export default function Loginscreen() {
                                     callback={responseFacebook} />
 
                             </div>
-
-                            <div className="socialfb">
-                                <FacebookLogin
-                                    appId="359002076153863"
-                                    autoLoad={false}
-                                    fields="name,email,picture"
-                                    callback={responseFacebook} />
-
-                            </div>
-
                         </div>
                     </div>
                 </div>

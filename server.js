@@ -1,5 +1,5 @@
+const logger = require("./logger");
 
-  
 const express = require("express");
 
 const Food = require('./models/foodmodel')
@@ -16,16 +16,25 @@ const fbuserRoute = require('./routes/fbuserRoute');
 
 
 app.use('/api/foods', foodsRoute)
-app.use('/api/users/' , userRoute)
-app.use('/api/fbusers/' , fbuserRoute)
+app.use('/api/users/', userRoute)
+app.use('/api/fbusers/', fbuserRoute)
 app.get("/", (req, res) => {
+    logger.log("info", "Default route executes");
+    logger.error('error message');
+    logger.warn('warn message');
+    logger.info('info message');
+    logger.verbose('verbose message');
+    logger.debug('debug message');
+    logger.silly('silly message');
     res.send("Server working " + port);
 });
 
 app.get("/getFoods", (req, res) => {
 
-    Food.find({} , (err , docs) => {
-        if(err){
+    logger.log("info", "getFoods route executes");
+
+    Food.find({}, (err, docs) => {
+        if (err) {
             console.log(err);
         }
         else {
@@ -34,22 +43,7 @@ app.get("/getFoods", (req, res) => {
     })
 });
 
-const { createLogger, format, transports } = require('winston');
-
-const logger = createLogger({
-  level: 'debug',
-  format: format.combine(format.colorize(), format.simple()),
-  transports: [new transports.Console()]
-});
-
-logger.error('error message');
-logger.warn('warn message');
-logger.info('info message');
-logger.verbose('verbose message');
-logger.debug('debug message');
-logger.silly('silly message');
-
 
 const port = process.env.PORT || 8000;
 
-app.listen(port, () => 'Server running on port port ');
+app.listen(port, () => { logger.log("info", 'app listening on port 3000!') });
