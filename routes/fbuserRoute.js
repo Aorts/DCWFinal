@@ -18,6 +18,7 @@ router.post("/facebook_login", async (req, res) => {
                 return res.status(400).json({ message: error });
             }
 
+            
         } else if(user){
             if (user.length > 0) {
                 const currentUser = {
