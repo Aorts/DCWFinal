@@ -35,14 +35,12 @@ export default function Navbar() {
                         <ul className="navbar-nav mr p-2">
 
                             {currentUser ? (
-                            
+
                                 <li className="nav-item">
                                     <a>
-                                    USERNAME&nbsp;&nbsp;:&nbsp;&nbsp;{currentUser.name}&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;{currentUser.name}&nbsp;&nbsp;&nbsp;&nbsp;
                                     </a>
-                                    <a className="nav-link text-center" onClick={() => { dispatch(logoutUser()) }}>
-                                    Logout
-                                    </a>
+                                    <i className="fa fa-sign-out fa-2x mt-1 " aria-hidden="true" onClick={() => { dispatch(logoutUser()) }}></i>
                                 </li>) : (
                                 <li className="nav-item">
                                     <a className="nav-link text-center" href="/login">
