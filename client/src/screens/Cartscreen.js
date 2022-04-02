@@ -1,6 +1,5 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import {addToCart} from '../action/cartAction'
 import {deleteFromCart} from '../action/cartAction'
 export default function Cartscreen() {
     const cartstate = useSelector(state => state.addToCartReducer)
@@ -42,6 +41,8 @@ export default function Cartscreen() {
 
                 </div>
             </div>
+
+
 
         </div>
     </div>
