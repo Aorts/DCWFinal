@@ -15,12 +15,11 @@ export const registerUser=(user)=>async dispatch=>{
 
 export const loginUser=(user)=>async dispatch=>{
 
-
+    console.log(user)
     dispatch({type:'USER_LOGIN_REQUEST'})
 
     try{
         const response = await axios.post('/api/users/login', user)
-        console.log(response);
         dispatch({type:'USER_LOGIN_SUCCESS' , payload : response.data})
         localStorage.setItem('currentUser' , JSON.stringify(response.data))
         window.location.href='/'

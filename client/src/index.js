@@ -6,6 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
 import store from './store';
 
+const ACTIONS = {
+  LOGIN: 'LOGIN',
+  GET_TOKEN: 'GET_TOKEN',
+  GET_USER: 'GET_USER',
+  GET_ALL_USERS: 'GET_ALL_USERS'
+}
+
+export default ACTIONS
+
 ReactDOM.render(
   <Provider store={store}>
     <App />

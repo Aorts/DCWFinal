@@ -9,11 +9,13 @@ const db = require("./db");
 app.use(express.json());
 
 const foodsRoute = require('./routes/foodsRoute');
-const userRoute = require('./routes/userRoute')
+const userRoute = require('./routes/userRoute');
+const fbuserRoute = require('./routes/fbuserRoute');
 
 
 app.use('/api/foods', foodsRoute)
 app.use('/api/users/' , userRoute)
+app.use('/api/fbusers/' , fbuserRoute)
 app.get("/", (req, res) => {
     res.send("Server working " + port);
 });

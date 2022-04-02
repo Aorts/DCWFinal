@@ -20,9 +20,7 @@ router.post("/register", async (req, res) => {
 
 
 router.post("/login", async (req, res) => {
-
     const { email, password } = req.body
-
     try {
 
         const user = await User.find({email , password})
@@ -32,7 +30,6 @@ router.post("/login", async (req, res) => {
             const currentUser = {
                 name: user[0].name,
                 email: user[0].email,
-                isAdmin: user[0].isAdmin,
                 _id: user[0]._id
             }
             res.send(currentUser);
@@ -46,5 +43,4 @@ router.post("/login", async (req, res) => {
     
 
 })
-
 module.exports = router
