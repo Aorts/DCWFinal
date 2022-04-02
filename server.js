@@ -18,6 +18,7 @@ const fbuserRoute = require('./routes/fbuserRoute');
 app.use('/api/foods', foodsRoute)
 app.use('/api/users/', userRoute)
 app.use('/api/fbusers/', fbuserRoute)
+
 app.get("/", (req, res) => {
     logger.log("info", "Default route executes");
     logger.error('error message');
