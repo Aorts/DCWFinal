@@ -29,3 +29,7 @@
 {"level":"info","message":"app listening on port 3000!"}
 {"level":"info","message":"app listening on port 3000!"}
 {"level":"info","message":"app listening on port 3000!"}
+{"level":"info","message":"app listening on port 3000!"}
+{"date":"Mon Jul 18 2022 19:28:20 GMT+0700 (เวลาอินโดจีน)","error":{"code":"ENOTFOUND","hostname":"_mongodb._tcp.cluster0.qhmk7.mongodb.net","syscall":"querySrv"},"exception":true,"level":"error","message":"uncaughtException: querySrv ENOTFOUND _mongodb._tcp.cluster0.qhmk7.mongodb.net\nError: querySrv ENOTFOUND _mongodb._tcp.cluster0.qhmk7.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:dns:213:19)","os":{"loadavg":[0,0,0],"uptime":38196},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","C:\\Users\\PC\\Desktop\\work\\DCW\\final\\DCWFinal\\server.js"],"cwd":"C:\\Users\\PC\\Desktop\\work\\DCW\\final\\DCWFinal","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18286802,"external":19922860,"heapTotal":35553280,"heapUsed":18687152,"rss":61583360},"pid":14580,"uid":null,"version":"v16.5.0"},"stack":"Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.qhmk7.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:dns:213:19)","trace":[{"column":19,"file":"node:dns","function":"QueryReqWrap.onresolve [as oncomplete]","line":213,"method":"onresolve [as oncomplete]","native":false}]}
+{"level":"info","message":"app listening on port 3000!"}
+{"level":"info","message":"app listening on port 3000!"}
